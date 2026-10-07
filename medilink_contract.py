@@ -25,7 +25,9 @@ def build_summary(patient: dict, appointments: list[dict], clinic_status: str = 
     # Return a new dictionary instead of mutating the incoming patient object.
     # This reduces surprising side effects for callers of the integration function.
     return {
-        "patient": dict(patient),
-        "appointments": list(appointments),
-        "clinic_status": clinic_status.strip().upper(),
+    "patient": dict(patient),
+    "appointments": list(appointments),
+    "status": clinic_status.strip().upper(),
     }
+
+    
